@@ -1,0 +1,217 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Abril Fatface', cursive;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation */
+.logo {
+  width: 150px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  width: 100%;
+  padding: 1% 2%;
+  position: fixed;
+  background-color: black;
+}
+
+.links_nav ul li {
+  display: inline-block;
+  list-style: none;
+  padding: 8px 10px;
+}
+
+.links_nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+  /* color: #ebdfdf; */
+  color: azure;
+}
+
+/* Footer */
+footer {
+  background-color: black;
+}
+
+.footer_container {
+  color: azure;
+  margin: 20px 40px;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 25px;
+  padding-bottom: px;
+}
+
+.footer_title {
+  margin-left: 120px;
+}
+.follower {
+  margin-left: 15px;
+}
+
+.giginov_address p {
+  margin: 10px;
+}
+
+.icon {
+  margin: 10px;
+}
+
+.fa-twitter,
+.fa-instagram {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.copyright_info {
+  color: azure;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  border-top: solid 1px rgba(128, 128, 128, 0.193);
+}
+
+.fa-globe {
+  margin-left: 43px;
+}
+
+/* About */
+.about_container h1 {
+  font-size: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.spacing{
+  height: 100px;
+}
+
+.about_container {
+  margin-bottom: 80px;
+}
+
+.about_background{
+  background-color: rgb(0, 0, 54.51);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.about_message {
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  width: 80%;
+  text-align: justify;
+  text-justify: inter-word;
+  /* background-color: rgba(0, 123, 255, 0.3); */
+  color: azure;
+  padding: 35px;
+  border-radius: 10px;
+}
+
+.values_container {
+  display: flex;
+  width: 90%;
+  justify-content: space-evenly;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+}
+
+.mission h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.mission {
+  width: 40%;
+  text-align: justify;
+  padding: 20px 30px 30px;
+  line-height: 1.6;
+  border-radius: 10px;
+  border: solid 1px rgba(128, 128, 128, 0.4);
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.fa-balance-scale,
+.fa-university {
+  font-size: 70px;
+}
+
+.values-icon {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+/* founder */
+.founder_details h3,
+h4 {
+  text-align: center;
+}
+
+
+.founder_details h3 {
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+.outer_container{
+  background-color: rgb(0, 0, 54.51);
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding:20px 0;
+  border-radius: 10px;
+}
+.founder_container {
+  display: flex;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+  /* background-color: rgba(0, 123, 255, 0.3); */
+  border: 4px rgba(0, 123, 255, 0.3);
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: white;
+  /* background-color: black; */
+}
+.founder_img {
+  background-image: url(./images/Mr_Clifford1.jpg);
+  width: 200px;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  /* border-radius: 50%; */
+  border-radius: 10px;
+}
+.founder_details h4 {
+  font-size: 35px;
+}
+
+.founder_info {
+  padding-top: 50px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  /* color: white; */
+  /* background-color: black; */
+}
+
+.founder_info p {
+  /* font-size: px; */
+  margin-top: 10px;
+  text-align: justify;
+}
+
+.founder_details {
+  margin-bottom: 100px;
+}

@@ -1,0 +1,23 @@
+{
+  "name": "giginov-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy":"gh-pages -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onugwu/giginov-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/onugwu/giginov-website/issues"
+  },
+  "homepage": "https://onugwu.github.io/giginov-website",
+  "dependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}

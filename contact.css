@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Abril Fatface", cursive;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Navigation */
+.logo {
+  width: 150px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  width: 100%;
+  padding: 1% 2%;
+  position: fixed;
+  background-color: black;
+}
+
+.links_nav ul li {
+  display: inline-block;
+  list-style: none;
+  padding: 8px 10px;
+}
+
+.links_nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+  color: azure;
+}
+
+/* footer */
+footer {
+  background-color: black;
+}
+
+.footer_container {
+  color: azure;
+  margin: 20px 40px;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 25px;
+  padding-bottom: px;
+}
+
+.footer_title {
+  margin-left: 120px;
+}
+.follower {
+  margin-left: 15px;
+}
+
+.giginov_address p {
+  margin: 10px;
+}
+
+.icon {
+  margin: 10px;
+}
+
+.fa-twitter,
+.fa-instagram {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.copyright_info {
+  color: azure;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  border-top: solid 1px rgba(128, 128, 128, 0.193);
+}
+
+.fa-globe {
+  margin-left: 43px;
+}
+
+/* form */
+
+.spacing {
+  height: 100px;
+}
+
+.form_container {
+  display: grid;
+  grid-template-columns: auto auto;
+  height: 100vh;
+  justify-content: center;
+  column-gap: 100px;
+}
+
+.form_image {
+  background-image: url(./images/tech.jpg);
+  width: 600px;
+  height: 650px;
+  background-position: center;
+  background-size: cover;
+}
+
+h1 {
+  text-align: center;
+  font-size: 70px;
+  margin-bottom: 50px;
+}
+
+#name,
+#email,
+#company {
+  display: block;
+  margin-bottom: 30px;
+  height: 35px;
+  /* width: 500px; */
+  width: 36.5vw;
+}
+
+#inquiry {
+  display: block;
+  width: 36.5vw;
+}
+
+form {
+  margin-top: 20px;
+}
+
+form a {
+  margin-top: 30px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.form_page {
+  margin: auto;
+  margin-bottom: 70px;
+}
+
+@media(max-width: 700px){
+  
+  .form_container {
+  display: grid;
+  grid-template-columns: auto;
+  /* height: 100vh;*/
+  justify-content: center;
+  column-gap: 100px; 
+}
+
+
+  .form_image {
+  background-image: none;
+  }
+}

@@ -25,6 +25,7 @@ nav {
   display: inline-block;
   list-style: none;
   padding: 8px 10px;
+  position: relative;
 }
 
 .links_nav ul li a {
@@ -32,6 +33,60 @@ nav {
   color: black;
   font-size: 15px;
   color: azure;
+
+}
+
+.products_list{
+  display: none;
+}
+
+.links_nav ul li .fa{
+  color: white;
+}
+
+.links_nav ul li:hover{
+  background: rgba(0, 123, 255, 0.2);
+}
+
+.links_nav ul li:hover .products_list{
+  display: block;
+  position:  absolute;
+  background: black;
+  /*margin-top: 10px;
+  margin-left: -23px;*/
+  top:  100%;
+  left: -7%;
+  width: 210px;
+  z-index: 2;
+
+}
+
+.links_nav ul li:hover .products_list ul {
+  display: block;
+  text-align: center;
+}
+
+.links_nav ul li:hover .products_list ul li {
+  width: 200px;
+  padding: 10px;
+  border-bottom: 1px solid #fff;
+  text-align: center;
+  background: transparent;
+}
+
+.links_nav ul li:hover .products_list ul li:last-child{
+  border-bottom: none;
+}
+
+/*.links_nav ul li:hover .products_list ul li:hover{
+  background: none;
+}*/
+
+
+
+.links_nav ul li:hover .products_list ul li a:hover {
+  color: grey;
+  background-color: none;
 }
 
 .intro {
@@ -382,13 +437,19 @@ nav .fa-times, nav .fa-bars{
     background-color:red;
     position: absolute;
     height: 110.5vh;
-    width: 200px;
+    width: 210px;
     top: 0;
     right: -200px;
     text-align: left;
     z-index: 2;
     transition: 1s;
   }
+
+ .links_nav ul li:hover .products_list{
+ 
+  left: 0%;
+
+}
 
   nav .fa-times, nav .fa-bars{
     display: block;

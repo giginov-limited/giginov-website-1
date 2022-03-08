@@ -18,41 +18,41 @@
 
   <body>
     <header>
-      <nav>
+      <nav class="navbar">
         <img src="./images/logo1.jpg" alt="#" class="logo"/>
-        <div class="links_nav" id="linksNav">
-          <i class="fa fa-times" onclick="closeMenu()"></i>
-          <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="#"> Products & Services</a>
-              <i class="fa fa-angle-down"></i>
-                <div class="products_list">
-                  <ul>
-                    <li><a href="#">IT Service</a></li>
-                    <li><a href="#">Voice Solutions</a></li>
-                    <li><a href="#">Hardware/Infrastructure</a></li>
-                    <li><a href="#">Enterprise Application</a></li>
-                    <li><a href="#">Service Desk</a></li>
-                    <li><a href="#">Software Development &
-                        Network Service</a></li>
-                    <li><a href="#">Advisory</a></li>
-                    <li><a href="#">Sofware Development
-                          Outsourcing</a></li>
-                    <li><a href="#">Security</a></li>
-                  </ul>
-                </div>
+        <label for ="input-hamburger" class="hamburger"></label>
+        <input type="checkbox" id="input-hamburger" hidden>
+        <ul class="menu" >  
+            <li><a href="./index.html" class="menu-link">Home</a></li>
+            <li><a href="./about.html" class="menu-link">About</a></li>
+            
+            </li>
+            <label for="btn" class="show show-1">Products & Services <span class="arrow"></span> </label>
+            <li class="has-dropdown has-dropdown-1"><a href="#" class="menu-link-1"> Products & Services
+              <span class="arrow"></span>
+              </a>   
+
+              
+              <input type="checkbox" id="btn">           
+                  <ul class="submenu submenu-1">
+                    <li><a href="#" class="menu-link-2">Advisory</a></li>
+                    <li><a href="#" class="menu-link">Security</a></li>
+                    <li><a href="#" class="menu-link">Service Desk</a></li> 
+                    <li><a href="#" class="menu-link">IT Service</a></li>  
+                    <li><a href="#" class="menu-link">Voice Solutions</a></li>
+                    <li><a href="#" class="menu-link">Hardware/Infrastructure</a></li>
+                    <li><a href="#"class="menu-link">Enterprise Application</a></li>
+                    <li><a href="#" class="menu-link">Software Development & Network Service</a></li> 
+                    <li><a href="#" class="menu-link">Sofware Development Outsourcing</a></li>
+                </ul>   
             </li>
             <li><a href="./projects.html">Projects</a></li>
             <li><a href="./contact.html">Contact Us</a></li>
           </ul>
-        </div>
-        <i class="fa fa-bars" onClick="showMenu()"></i>
       </nav>
     </header>
     <section class="intro">
-       
-      
+
       <div class="brief_intro">
         <h1 class="title_one">We use a simple yet systematic approach to meet<br> your IT needs    and build your business infrastructure </h1> 
         <p class="first_paragraph">
@@ -63,24 +63,23 @@
     </section>
     <section class="projects">
       <h2 class="project_title">Recent Projects </h2> <hr>
-          <div class="proj-slider">
-            
+          <div class="proj-slider">           
             <div class="proj-slide-track">
               <div class="img-slide">
                  <img src="./images/A.jpg" alt="#" />
-                <!-- <p>Wuse 2 CCTV installation</p>  -->
+                <p>Anambra state data center set up</p> 
               </div>
               <div class="img-slide">
                  <img src="./images/B.jpg" alt="" />
-                <!-- <p>Wuse 2 CCTV installation</p>  -->
+                <p>Ebony data center setup</p> 
               </div>
               <div class="img-slide">
                  <img src="./images/C.jpg" alt="" />
-                <!-- <p>Wuse 2 CCTV installation</p>  -->
+                <p>Ebony data center setup</p> 
               </div>
                 <div class="img-slide">
                  <img src="./images/D.jpg" alt="" />
-                <!-- <p>Wuse 2 CCTV installation</p>  -->
+                <p>Anambra state data center set up</p> 
               </div>
             </div>
           </div>
@@ -93,10 +92,13 @@
       <hr>
 
       <div class="all_services">
-        <div class="iT_service">
-          <p class="service_desc">IT Service</p>
-            <p class="iT_desc">Whether it is cloud, mobile or social media, modern threats demand a new layer of protection that can  keep the high-value applications and data assets in your physical and virtual data centers secure, yet accessible.
-            Giginov helps clients use technology to meet their business objectives because we understand that our client’s needs vary from industry to industry, and from organization to organization.</p>
+        <div class="iT_service">  
+            <img src="./images/Engineering-welding.jpg" class="iT_service_img">
+            <div class="iT_desc">
+              <p class="service_desc">IT Service</p>
+              <p class="iT_desc_word">Whether it is cloud, mobile or social media, modern threats demand a new layer of protection that can  keep the high-value applications and data assets in your physical and virtual data centers secure, yet accessible.
+              Giginov helps clients use technology to meet their business objectives because we understand that our client’s needs vary from industry to industry, and from organization to organization.</p>
+            </div>
         </div>
         <div class="service_list">
           <div class="service_first_list">
@@ -144,7 +146,6 @@
           <p class="office_address"><i class="fa fa-location-arrow"></i> No. 21 Niamey Street Wuse 2, Abuja, Nigeria.</p>
           <p class="info_1"> <i class="fa fa-envelope"></i>  info@giginov.com</p> 
           <p class="info_2">  <i class="fa fa-globe"></i> www.giginov.com</p>
-          <!-- <p><i class="fa fa-globe"></i> www.giginov.com</p> -->
         </div>
         <div>
           <h4 class="follower">Follow US </h4>
@@ -160,14 +161,11 @@
     </footer>
 
     <script>
-      var linksNav = document.getElementById("linksNav");
-      function showMenu(){
-        linksNav.style.right = "0px";
-      };
-
-      function closeMenu(){
-        linksNav.style.right="-200px"
-      };
+      const hamburger = document.querySelector(".hamburger");
+      hamburger.addEventListener("click", function(){
+        this.classList.toggle("close");
+      })
     </script> 
+
   </body>
 </html>

@@ -1,39 +1,142 @@
-* {
+:root {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Abril Fatface', cursive;
-  font-family: 'Poppins', sans-serif;
+  --primary: rgb(0, 0, 54.51);
+  --hover-color: rgb(173, 216, 230);
+  --dark: black;
+  --light: white;
+  --header-bg: var(--dark);
 }
 
-/* Navigation */
+* {
+  font-family: "Abril Fatface", cursive;
+  font-family: "Poppins", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: var(--header-bg);
+  padding: 1% 2%;
+}
+
 .logo {
   width: 150px;
 }
-nav {
+
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 1;
-  width: 100%;
-  padding: 1% 2%;
-  position: fixed;
-  background-color: black;
 }
 
-.links_nav ul li {
-  display: inline-block;
+.menu {
+  display: flex;
+  flex-direction: row;
+}
+
+.menu li {
   list-style: none;
-  padding: 8px 10px;
 }
 
-.links_nav ul li a {
+.menu li a {
+  display: block;
   text-decoration: none;
-  color: black;
+  color: var(--light);
+  padding: 8px 10px;
   font-size: 15px;
-  /* color: #ebdfdf; */
-  color: azure;
 }
+
+/*styling submenu */
+.has-dropdown {
+  position: relative;
+}
+
+.submenu {
+  z-index: 2;
+  position: absolute;
+  background-color: var(--dark);
+  left: 0;
+  white-space: nowrap;
+  padding: 1.5em 0;
+  width: 22em;
+
+  /*hide submenu*/
+  opacity: 0;
+  visibility: hidden;
+  transform: scaleY(0);
+  transform-origin: top center;
+}
+
+.submenu > li > a {
+  padding: 0.8em 1.5em;
+}
+
+.submenu .submenu {
+  left: -100%;
+  top: 0;
+}
+
+.submenu .submenu .submenu {
+  left: -100%;
+  top: 0;
+}
+
+.menu > li:hover > a,
+.submenu > li:hover > a {
+  background-color: hsla(0, 0%, 100%, 0.05);
+  color: var(--hover-color);
+}
+
+.menu > li > a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: var(--hover-color);
+  display: block;
+}
+
+.menu > li:hover > a::after {
+  width: 100%;
+}
+
+.arrow {
+  width: 0.5em;
+  height: 0.5em;
+  display: inline-block;
+  vertical-align: middle;
+  border-left: 0.15em solid currentColor;
+  border-bottom: 0.15em solid currentColor;
+  transform: rotate(-45deg);
+  margin-top: -0.25em;
+  transition: transform 100ms ease-in-out;
+}
+
+/*Reveal */
+.menu > li:hover > input + .submenu,
+.submenu > li:hover > input + .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: scaleY(1);
+}
+
+.show,
+input {
+  display: none;
+}
+
+/*Anitmate arrows*/
+
+.menu > li:hover > a > .arrow,
+.submenu > li:hover > a > .arrow {
+  transform: rotate(225deg);
+}
+
 
 /* Footer */
 footer {

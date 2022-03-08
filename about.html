@@ -16,16 +16,37 @@
 </head>
 <body>
  <header>
-      <nav>
-        <img src="./images/Logo.JPG" alt="#" class="logo"/>
-        <div class="links_nav">
-          <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Projects</a></li>
-            <li><a href="">Contact Us</a></li>
+      <nav class="navbar">
+        <img src="./images/logo1.jpg" alt="#" class="logo"/>
+        <label for ="input-hamburger" class="hamburger"></label>
+        <input type="checkbox" id="input-hamburger" hidden>
+        <ul class="menu" >  
+            <li><a href="./index.html" class="menu-link">Home</a></li>
+            <li><a href="./about.html" class="menu-link">About</a></li>
+            
+            </li>
+            <label for="btn" class="show show-1">Products & Services <span class="arrow"></span> </label>
+            <li class="has-dropdown has-dropdown-1"><a href="#" class="menu-link-1"> Products & Services
+              <span class="arrow"></span>
+              </a>   
+
+              
+              <input type="checkbox" id="btn">           
+                  <ul class="submenu submenu-1">
+                    <li><a href="#" class="menu-link-2">Advisory</a></li>
+                    <li><a href="#" class="menu-link">Security</a></li>
+                    <li><a href="#" class="menu-link">Service Desk</a></li> 
+                    <li><a href="#" class="menu-link">IT Service</a></li>  
+                    <li><a href="#" class="menu-link">Voice Solutions</a></li>
+                    <li><a href="#" class="menu-link">Hardware/Infrastructure</a></li>
+                    <li><a href="#"class="menu-link">Enterprise Application</a></li>
+                    <li><a href="#" class="menu-link">Software Development & Network Service</a></li> 
+                    <li><a href="#" class="menu-link">Sofware Development Outsourcing</a></li>
+                </ul>   
+            </li>
+            <li><a href="./projects.html">Projects</a></li>
+            <li><a href="./contact.html">Contact Us</a></li>
           </ul>
-        </div>
       </nav>
     </header>
     <div class="spacing">

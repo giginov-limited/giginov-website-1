@@ -79,106 +79,102 @@ nav {
 }
 */
 
-
 :root {
   box-sizing: border-box;
   --primary: #pink;
   --hover-color: rgb(173, 216, 230);
   --dark: black;
   --light: white;
-  --header-bg:  var(--dark);
+  --header-bg: var(--dark);
 }
 
-*{
+* {
   font-family: "Abril Fatface", cursive;
   font-family: "Poppins", sans-serif;
 }
 
-*, *::after, *::before{
+*,
+*::after,
+*::before {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
 }
 
-
-header{
-  background:  var(--header-bg);
+header {
+  background: var(--header-bg);
   padding: 1% 2%;
-
 }
 
 .logo {
   width: 150px;
 }
 
-.navbar{
-  display:  flex;
-  justify-content:  space-between;
-  align-items:  center;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.menu{
+.menu {
   display: flex;
   flex-direction: row;
 }
 
-.menu li{
+.menu li {
   list-style: none;
 }
 
-.menu li a{
+.menu li a {
   display: block;
-  text-decoration:  none;
-  color: var(--light); 
-  padding:  8px 10px;
-  font-size:  15px;
-} 
-
-/*styling submenu */
-.has-dropdown{
-  position:  relative;
+  text-decoration: none;
+  color: var(--light);
+  padding: 8px 10px;
+  font-size: 15px;
 }
 
-.submenu{
+/*styling submenu */
+.has-dropdown {
+  position: relative;
+}
+
+.submenu {
   z-index: 2;
-  position:  absolute;
+  position: absolute;
   background-color: var(--dark);
   left: 0;
   white-space: nowrap;
-  padding:  1.5em 0;
-  width:  22em;
+  padding: 1.5em 0;
+  width: 22em;
 
   /*hide submenu*/
   opacity: 0;
   visibility: hidden;
-  transform:  scaleY(0);
-  transition-origin: top center;
+  transform: scaleY(0);
+  transform-origin: top center;
 }
 
-
-.submenu > li > a{
+.submenu > li > a {
   padding: 0.8em 1.5em;
 }
 
-.submenu .submenu{
-  left:  -100%;
-  top:  0;
-}
-
-.submenu .submenu .submenu{
-  left:  -100%;
+.submenu .submenu {
+  left: -100%;
   top: 0;
 }
 
+.submenu .submenu .submenu {
+  left: -100%;
+  top: 0;
+}
 
- .menu > li:hover > a, .submenu > li:hover > a{
-  
+.menu > li:hover > a,
+.submenu > li:hover > a {
   background-color: hsla(0, 0%, 100%, 0.05);
   color: var(--hover-color);
 }
 
-
-.menu > li > a::after{
+.menu > li > a::after {
   content: "";
   width: 0;
   height: 2px;
@@ -186,45 +182,43 @@ header{
   display: block;
 }
 
-.menu > li:hover > a::after{
+.menu > li:hover > a::after {
   width: 100%;
 }
 
-
-.arrow{
+.arrow {
   width: 0.5em;
-  height:  0.5em;
+  height: 0.5em;
   display: inline-block;
   vertical-align: middle;
   border-left: 0.15em solid currentColor;
   border-bottom: 0.15em solid currentColor;
   transform: rotate(-45deg);
-  margin-top:  -0.25em;
-  transition:  transform 100ms ease-in-out;
+  margin-top: -0.25em;
+  transition: transform 100ms ease-in-out;
 }
-
 
 /*Reveal */
 .menu > li:hover > input + .submenu,
- .submenu > li:hover > input + .submenu{
+.submenu > li:hover > input + .submenu {
   opacity: 1;
   visibility: visible;
   transform: scaleY(1);
 }
 
-.show, input{
+.show,
+input {
   display: none;
 }
 
 /*Anitmate arrows*/
 
 .menu > li:hover > a > .arrow,
-.submenu > li:hover > a > .arrow{
-  transform:  rotate(225deg);
+.submenu > li:hover > a > .arrow {
+  transform: rotate(225deg);
 }
 
-
-             /*    body    */
+/*    body    */
 .intro {
   min-height: 100vh;
   background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
@@ -384,20 +378,19 @@ img:hover {
   background-color: rgb(0, 0, 54.51);
   align-items: center;
   justify-items: center;
-  }
+}
 
 .iT_desc {
   grid-area: iT_desc;
   line-height: 1.6;
-  
 }
-.iT_desc_word{
+.iT_desc_word {
   text-align: justify;
   display: grid;
   padding-right: 20px;
 }
 
-.iT_service_img{
+.iT_service_img {
   grid-area: iT_service_img;
   display: flex;
   flex-direction: column;
@@ -406,14 +399,13 @@ img:hover {
   padding-left: 20px;
 }
 
-img{
+img {
   width: 100%;
 }
 
 .service_list {
   margin: auto;
   width: 80%;
-
 }
 
 .service_first_list {
@@ -425,7 +417,7 @@ img{
   border-radius: 10px;
 
   background-image: url(./images/truss.jpg);
-  background-size:  cover;
+  background-size: cover;
   background-position: center;
 }
 
@@ -543,16 +535,16 @@ footer {
   }
 }
 
-@media (max-width: 904px){
+@media (max-width: 904px) {
   .iT_service {
-      grid-template-columns: auto;
-    }
-
-  .iT_service_img{
-      padding: 20px;
-      padding-top: 5px;
+    grid-template-columns: auto;
   }
-  .iT_desc_word{
+
+  .iT_service_img {
+    padding: 20px;
+    padding-top: 5px;
+  }
+  .iT_desc_word {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -614,7 +606,7 @@ footer {
 
 /*media query for navigation*/
 
-@media (max-width: 900px){
+@media (max-width: 900px) {
   /*.submenu .submenu .submenu{
     left:  100%;
     top:  0.5em;
@@ -628,9 +620,8 @@ footer {
 }
 */
 
-
-@media (max-width: 700px){
-  .submenu{
+@media (max-width: 700px) {
+  .submenu {
     width: 90%;
     /*padding-left: 10px;*/
     padding-top: 0px;
@@ -639,23 +630,23 @@ footer {
     border: 1px solid var(--light);
   }
 
-  .submenu .menu-link-2{
+  .submenu .menu-link-2 {
     padding-top: 0px;
   }
 
-  header{
+  header {
     position: relative;
     padding: 1.5em 2em;
   }
 
-  .menu{
+  .menu {
     flex-flow: column;
     position: absolute;
-    background:  var(--dark);
-    top:  4.55em;
+    background: var(--dark);
+    top: 4.55em;
     left: 0;
-    right:  0;
-    height:  130vh;
+    right: 0;
+    height: 130vh;
     font-size: 20px;
 
     /*hide menu*/
@@ -663,76 +654,76 @@ footer {
     transform: scaleY(0);
     transform-origin: top center;
     transition: 200ms transform cubic-bezier(0.36, 0.4, 0.42, 1.48) 100ms,
-     100ms opacity ease-in-out;
+      100ms opacity ease-in-out;
   }
 
-  .menu > li > a{
+  .menu > li > a {
     font-size: 18px;
     color: var(--light);
-    background:  var(--dark);
+    background: var(--dark);
     text-align: center;
-
   }
 
-  .menu .has-dropdown-1 > a{
+  .menu .has-dropdown-1 > a {
     display: none;
   }
 
-  .hamburger{
-    width:  2em;
-    height:  0.25em;
-    display:  block;
-    background:  var(--light);
+  .hamburger {
+    width: 2em;
+    height: 0.25em;
+    display: block;
+    background: var(--light);
     position: relative;
     cursor: pointer;
-    transition:  0.2s transform ease-in-out;
+    transition: 0.2s transform ease-in-out;
   }
 
-  .hamburger::after, .hamburger::before{
+  .hamburger::after,
+  .hamburger::before {
     content: "";
     position: absolute;
     left: 0;
-    background: inherit; 
+    background: inherit;
     width: inherit;
-    height:  inherit;
-    transition:  0.2s transform ease-in-out;
+    height: inherit;
+    transition: 0.2s transform ease-in-out;
   }
 
-  .hamburger::after{
+  .hamburger::after {
     top: 0.65em;
   }
 
-  .hamburger::before{
+  .hamburger::before {
     bottom: 0.65em;
   }
 
-  .close::after, close::before{
+  .close::after,
+  close::before {
     top: 0;
-    transition:  0.2s transform ease-in-out;
+    transition: 0.2s transform ease-in-out;
   }
 
-  .close::before{
+  .close::before {
     display: none;
   }
 
-  .close{
-    transform:  rotate(45deg);
-    transition:  0.2s transform ease-in-out;
+  .close {
+    transform: rotate(45deg);
+    transition: 0.2s transform ease-in-out;
   }
-  .close::after{
+  .close::after {
     transform: rotate(-90deg);
   }
 
   /*reveal menu*/
-  input[type="checkbox"]:checked + .menu{
+  input[type="checkbox"]:checked + .menu {
     position: absolute;
     opacity: 1;
     transform: scaleY(1);
     z-index: 1;
-    }
+  }
 
-
-/*input[type="checkbox"]:checked + .submenu{
+  /*input[type="checkbox"]:checked + .submenu{
     position: absolute;
     opacity: 1;
     visibility: visible;
@@ -740,19 +731,16 @@ footer {
     z-index: 1;
     }*/
 
-
-
-    [id^=btn]:checked + ul{
+  [id^="btn"]:checked + ul {
     position: absolute;
     opacity: 1;
     visibility: visible;
     transform: scaleY(1);
     z-index: 1;
     /*display: block;*/
-    }
-  
+  }
 
-    /*[id^=btn]:checked  + ul{
+  /*[id^=btn]:checked  + ul{
     position: absolute;
     opacity: 1;
     visibility: visible;
@@ -760,10 +748,10 @@ footer {
     z-index: 1;
     }*/
 
-    .show{
+  .show {
     display: inline-block;
     color: white;
-    font-size:  18px;
+    font-size: 18px;
     margin-left: 10px;
     line-height: 70px;
     cursor: pointer;
@@ -771,13 +759,12 @@ footer {
     /*background-color: blue;*/
     margin-top: 0px;
   }
-  
-  input{
+
+  input {
     display: none;
   }
 
-  .arrow{
+  .arrow {
     padding-left: 5px;
   }
-  
 }

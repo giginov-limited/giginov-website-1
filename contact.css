@@ -1,58 +1,187 @@
-* {
+:root {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  --primary: rgb(0, 0, 54.51);
+  --hover-color: rgb(173, 216, 230);
+  --dark: black;
+  --light: white;
+  --header-bg: var(--dark);
+}
+
+* {
   font-family: "Abril Fatface", cursive;
   font-family: "Poppins", sans-serif;
 }
 
-/* Navigation */
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: var(--header-bg);
+  padding: 1% 2%;
+  position: fixed;
+  z-index: 1;
+  width: 100vw;
+}
+
 .logo {
   width: 150px;
 }
-nav {
+
+.navbar{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 1;
-  width: 100%;
-  padding: 1% 2%;
-  position: fixed;
-  background-color: black;
 }
 
-.links_nav ul li {
-  display: inline-block;
+.menu {
+  display: flex;
+  flex-direction: row;
+}
+
+.menu li {
   list-style: none;
-  padding: 8px 10px;
 }
 
-.links_nav ul li a {
+.menu li a {
+  display: block;
   text-decoration: none;
-  color: black;
+  color: var(--light);
+  padding: 8px 10px;
   font-size: 15px;
-  color: azure;
 }
 
-/* footer */
+/*styling submenu */
+.has-dropdown {
+  position: relative;
+}
+
+.submenu {
+  z-index: 2;
+  position: absolute;
+  background-color: var(--dark);
+  left: 0;
+  white-space: nowrap;
+  padding: 24px 0;
+  width: 352px;
+
+  /*hide submenu*/
+  opacity: 0;
+  visibility: hidden;
+  transform: scaleY(0);
+  transform-origin: top center;
+}
+
+.submenu > li > a {
+  padding: 12.8px 24px;
+}
+
+.submenu .submenu {
+  left: -100%;
+  top: 0;
+}
+
+.submenu .submenu .submenu {
+  left: -100%;
+  top: 0;
+}
+
+.menu > li:hover > a,
+.submenu > li:hover > a {
+  background-color: hsla(0, 0%, 100%, 0.05);
+  color: var(--hover-color);
+}
+
+.menu > li > a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: var(--hover-color);
+  display: block;
+}
+
+.menu > li:hover > a::after {
+  width: 100%;
+}
+
+.arrow{
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  vertical-align: middle;
+  border-left: 2.4px solid currentColor;
+  border-bottom: 2.4px solid currentColor;
+  transform: rotate(-45deg);
+  margin-top: -4px;
+  transition: transform 100ms ease-in-out;
+}
+
+/*Reveal */
+.menu > li:hover > input + .submenu,
+.submenu > li:hover > input + .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: scaleY(1);
+}
+
+.show,
+#input-hamburger, #btn {
+  display: none;
+}
+
+/*Anitmate arrows*/
+
+.menu > li:hover > a > .arrow,
+.submenu > li:hover > a > .arrow {
+  transform: rotate(225deg);
+}
+
+
+ /* footer */
 footer {
-  background-color: black;
+  background-color: var(--dark);
 }
 
 .footer_container {
-  color: azure;
+  color: var(--light);
   margin: 20px 40px;
   display: flex;
   justify-content: space-around;
   padding-top: 25px;
-  padding-bottom: px;
+  padding-bottom: 10px;
+}
+
+.follower {
+  margin-left: 15px;
+}
+
+.giginov_address {
+  display: grid;
+  grid-template-areas:
+    "footer_title footer_title"
+    "office_address office_address"
+    "info_1 info_2";
+  text-align: center;
+}
+
+.office_address {
+  grid-area: office_address;
 }
 
 .footer_title {
-  margin-left: 120px;
+  grid-area: footer_title;
 }
-.follower {
-  margin-left: 15px;
+
+.info_1 {
+  grid-area: info_1;
+}
+
+.info_2 {
+  grid-area: info_2;
 }
 
 .giginov_address p {
@@ -70,24 +199,20 @@ footer {
 }
 
 .copyright_info {
-  color: azure;
+  color: var(--light);
   text-align: center;
   padding-top: 20px;
   padding-bottom: 15px;
   border-top: solid 1px rgba(128, 128, 128, 0.193);
 }
 
-.fa-globe {
-  margin-left: 43px;
-}
-
 /* form */
 
 .spacing {
-  height: 100px;
+  height: 70px;
 }
 
-.form_container {
+.form_container{
   display: grid;
   grid-template-columns: auto auto;
   height: 100vh;
@@ -105,8 +230,8 @@ footer {
 
 h1 {
   text-align: center;
-  font-size: 70px;
-  margin-bottom: 50px;
+  font-size: 60px;
+  margin-bottom: 30px;
 }
 
 #name,
@@ -157,3 +282,157 @@ form a {
   background-image: none;
   }
 }
+
+
+/* Media Query for footer */
+@media (max-width: 700px) {
+  .footer_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .giginov_address {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width:500px){
+  footer h4,
+  p {
+    font-size: 12px;
+  }
+}
+
+
+/*media query for navigation*/
+
+@media (max-width: 700px) {
+  .submenu {
+    width: 90%;
+    padding-top: 0px;
+    left: 22px;
+    text-align: center;
+    border-left: 1px solid var(--light);
+  }
+
+  .submenu .menu-link-2 {
+    padding-top: 0px;
+  }
+
+  header{
+    position: fixed;
+    padding: 22px 32px;
+  }
+
+  .menu{
+    flex-flow: column;
+    position: absolute;
+    background: var(--dark);
+    top: 72.8px;
+    left: 0;
+    right: 0;
+    height: 130vh;
+    font-size: 20px;
+
+    /*hide menu*/
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top center;
+    transition: 200ms transform cubic-bezier(0.36, 0.4, 0.42, 1.48) 100ms,
+      100ms opacity ease-in-out;
+  }
+
+  .menu > li > a {
+    font-size: 18px;
+    color: var(--light);
+    background: var(--dark);
+    text-align: center;
+  }
+
+  .menu .has-dropdown-1 > a {
+    display: none;
+  }
+
+  .hamburger {
+    width: 32px;
+    height: 4px;
+    display: block;
+    background: var(--light);
+    position: relative;
+    cursor: pointer;
+    transition: 0.2s transform ease-in-out;
+  }
+
+  .hamburger::after,
+  .hamburger::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    background: inherit;
+    width: inherit;
+    height: inherit;
+    transition: 0.2s transform ease-in-out;
+  }
+
+  .hamburger::after {
+    top: 10.4px;
+  }
+
+  .hamburger::before {
+    bottom: 10.4px;
+  }
+
+  .close::after,
+  close::before {
+    top: 0;
+    transition: 0.2s transform ease-in-out;
+  }
+
+  .close::before {
+    display: none;
+  }
+
+  .close {
+    transform: rotate(45deg);
+    transition: 0.2s transform ease-in-out;
+  }
+  .close::after {
+    transform: rotate(-90deg);
+  }
+
+  /*reveal menu*/
+  input[type="checkbox"]:checked + .menu {
+    position: absolute;
+    opacity: 1;
+    transform: scaleY(1);
+    z-index: 1;
+  }
+
+  [id^="btn"]:checked + ul {
+    position: absolute;
+    opacity: 1;
+    visibility: visible;
+    transform: scaleY(1);
+    z-index: 1;
+  }
+
+  .show {
+    display: inline-block;
+    color: white;
+    font-size: 18px;
+    margin-left: 10px;
+    line-height: 70px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 0px;
+  }
+
+  input {
+    display: none;
+  }
+
+  .arrow {
+    padding-left: 5px;
+  }
+}
+

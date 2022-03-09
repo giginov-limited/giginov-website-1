@@ -5,31 +5,52 @@
      <meta name="description" content="Giginov offers its clients the capability to reinvent themselves and remodel their operations and business services using proven business methodologies."/>
     <meta charset="UTF-8" />
     <meta name="robots" content="index,follow"/>
-    <link rel="icon" href="./images/Logo.jpg">
+    <link rel="icon" href="./images/logo1.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" href="contact.css" />
-     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="./contact.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/12395ae780.js" crossorigin="anonymous"></script>
-</head>
-
+  </head>
 
 <body>
     <header>
-      <nav>
-        <img src="./images/Logo.JPG" alt="#" class="logo"/>
-        <div class="links_nav">
-          <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Projects</a></li>
-            <li><a href="">Contact Us</a></li>
+      <nav class="navbar">
+        <img src="./images/logo1.jpg" alt="#" class="logo"/>
+        <label for ="input-hamburger" class="hamburger"></label>
+        <input type="checkbox" id="input-hamburger" hidden>
+        <ul class="menu" >  
+            <li><a href="./index.html" class="menu-link">Home</a></li>
+            <li><a href="./about.html" class="menu-link">About</a></li>
+            
+            </li>
+            <label for="btn" class="show show-1">Products & Services <span class="arrow"></span> </label>
+            <li class="has-dropdown has-dropdown-1"><a href="#" class="menu-link-1"> Products & Services
+              <span class="arrow"></span>
+              </a>   
+
+              
+              <input type="checkbox" id="btn">           
+                  <ul class="submenu submenu-1">
+                    <li><a href="#" class="menu-link-2">Advisory</a></li>
+                    <li><a href="#" class="menu-link">Security</a></li>
+                    <li><a href="#" class="menu-link">Service Desk</a></li> 
+                    <li><a href="#" class="menu-link">IT Service</a></li>  
+                    <li><a href="#" class="menu-link">Voice Solutions</a></li>
+                    <li><a href="#" class="menu-link">Hardware/Infrastructure</a></li>
+                    <li><a href="#"class="menu-link">Enterprise Application</a></li>
+                    <li><a href="#" class="menu-link">Software Development & Network Service</a></li> 
+                    <li><a href="#" class="menu-link">Sofware Development Outsourcing</a></li>
+                </ul>   
+            </li>
+            <li><a href="./projects.html">Projects</a></li>
+            <li><a href="./contact.html">Contact Us</a></li>
           </ul>
-        </div>
       </nav>
     </header>
+
     <div class="spacing"></div>
     <div class="form_page">
         <h1>Contact Us</h1>
@@ -53,12 +74,13 @@
     </div>
    </div>
 
-    <footer>
+     <footer>
       <div class="footer_container">
         <div class="giginov_address">
           <h4 class="footer_title">Giginov Limited</h4>
-          <p><i class="fa fa-location-arrow"></i> No. 21 Niamey Street Wuse 2, Abuja, Nigeria.</p>
-          <p> <i class="fa fa-envelope"></i>  info@giginov.com   <i class="fa fa-globe"></i> www.giginov.com</p>
+          <p class="office_address"><i class="fa fa-location-arrow"></i> No. 21 Niamey Street Wuse 2, Abuja, Nigeria.</p>
+          <p class="info_1"> <i class="fa fa-envelope"></i>  info@giginov.com</p> 
+          <p class="info_2">  <i class="fa fa-globe"></i> www.giginov.com</p>
         </div>
         <div>
           <h4 class="follower">Follow US </h4>
@@ -72,5 +94,12 @@
     </div>
       <p class="copyright_info">Copyright <i class="fa fa-copyright"></i> Giginov Limited 2022</p>    
     </footer>
+
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      hamburger.addEventListener("click", function(){
+        this.classList.toggle("close");
+      })
+    </script>
 </body>
 </html>

@@ -5,15 +5,15 @@
      <meta name="description" content="Giginov offers its clients the capability to reinvent themselves and remodel their operations and business services using proven business methodologies."/>
     <meta charset="UTF-8" />
     <meta name="robots" content="index,follow"/>
-    <link rel="icon" href="./images/Logo.jpg">
+    <link rel="icon" href="./images/logo1.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="./about.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/12395ae780.js" crossorigin="anonymous"></script>
-</head>
+  </head>
 <body>
  <header>
       <nav class="navbar">
@@ -68,17 +68,17 @@
         <div class="values_container">
             <div class="mission">
                 <p class="values-icon"><i class="fa fa-balance-scale" aria-hidden="true"></i></p>
-                <h2>Our Mission</h2>
+                <h2>Our Mission </h2> <hr>
                 <p>To safely deliver quality services and products to the Web Application Networking, Data Analysis, Computer and Mobile Applications etc. We will achieve this through thoroughly trained professionals, equipped with the right tools necessary to succeed personally and in the representation of our company. We will act with integrity in an honest, open and co-operative environment </p>
             </div>
             <div class="mission">
                 <p class="values-icon"><i class="fa fa-university" aria-hidden="true"></i></p>
-                <h2>Our Vision</h2>
+                <h2>Our Vision</h2> <hr>
                 <p>To safely deliver quality services and products to the Web Application Networking, Data Analysis, Computer and Mobile Applications etc. We will achieve this through thoroughly trained professionals, equipped with the right tools necessary to succeed personally and in the representation of our company. We will act with integrity in an honest, open and co-operative environment </p>
             </div>
         </div>
     
-    <div class="founder_details">
+    <!-- <div class="founder_details">
         <h3>Meet Our Founder</h3>
         <div class="outer_container">
           <div class="founder_container">
@@ -89,14 +89,15 @@
               </div>
           </div>
         </div>
-    </div>
+    </div> -->
 
  <footer>
       <div class="footer_container">
         <div class="giginov_address">
           <h4 class="footer_title">Giginov Limited</h4>
-          <p><i class="fa fa-location-arrow"></i> No. 21 Niamey Street Wuse 2, Abuja, Nigeria.</p>
-          <p> <i class="fa fa-envelope"></i>  info@giginov.com   <i class="fa fa-globe"></i> www.giginov.com</p>
+          <p class="office_address"><i class="fa fa-location-arrow"></i> No. 21 Niamey Street Wuse 2, Abuja, Nigeria.</p>
+          <p class="info_1"> <i class="fa fa-envelope"></i>  info@giginov.com</p> 
+          <p class="info_2">  <i class="fa fa-globe"></i> www.giginov.com</p>
         </div>
         <div>
           <h4 class="follower">Follow US </h4>
@@ -110,5 +111,12 @@
     </div>
       <p class="copyright_info">Copyright <i class="fa fa-copyright"></i> Giginov Limited 2022</p>    
     </footer>
+
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      hamburger.addEventListener("click", function(){
+        this.classList.toggle("close");
+      })
+    </script> 
 </body>
 </html>

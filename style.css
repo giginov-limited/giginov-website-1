@@ -256,6 +256,7 @@ img:hover {
   text-align: center;
 }
 
+/*project button*/
 .view_more {
   width: 70%;
   margin-left: auto;
@@ -266,6 +267,11 @@ img:hover {
   color: var(--light);
   text-decoration: none;
   display: block;
+}
+
+/*project button*/
+.view_more:hover{
+  background-color: hsl(0, 0%, 15%);
 }
 
 /* Service */
@@ -535,7 +541,7 @@ footer {
     padding-top: 0px;
     left: 22px;
     text-align: center;
-    border: 1px solid var(--light);
+    border-left: 1px solid var(--light);
   }
 
   .submenu .menu-link-2 {

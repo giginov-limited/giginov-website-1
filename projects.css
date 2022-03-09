@@ -248,6 +248,7 @@ h1 {
   font-size: 60px;
   margin-bottom: 30px;
 }
+
 h2{
   text-align: center;
   margin-bottom: 20px;
@@ -272,8 +273,7 @@ h2{
     padding-bottom: 30px;
   }
   .project_container p{
-      line-height: 20px;
-      
+      line-height: 20px;     
   }
 
 }
@@ -308,13 +308,18 @@ h2{
   h1{
     font-size: 35px;
   }
+
+  p {
+    font-size: 12px;
+  }
+
   .project_container{
     width: 300px;
     background-color: var(--primary);
     color: white;
     padding: 20px;
     margin-bottom: 20px;
-}
+  }
 
   .container{
     display:grid;
@@ -323,11 +328,8 @@ h2{
     margin: auto;
     column-gap: 40px;
     row-gap: 1px; 
-}
-
-  footer h4, p {
-  font-size: 12px;
   }
+
 }
 
 

@@ -239,7 +239,7 @@ footer {
   margin-left: auto;
   margin-right: auto;
   line-height: 1.6;
-  width: 80%;
+  width: 90%;
   text-align: justify;
   text-justify: inter-word;
   /* background-color: rgba(0, 123, 255, 0.3); */
@@ -290,17 +290,82 @@ footer {
   margin-bottom: 10px;
 }
 
+     /*Media query for about body*/
+
+@media (max-width: 1300px){
+  .about_message{
+    width: 95%;
+  }
+}
+
+@media (max-width: 900px){
+
+  .about_container h1{
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+
+  .values_container{
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .mission_1{
+    margin-bottom: 50px;
+  }
+
+  .mission {
+  width: 70%;
+  }
+}
+
+@media (max-width: 800px){
+  .about_message{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+}
+
 @media (max-width: 700px){
   .about_container h1{
-    font-size: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .mission{
+    line-height: 1.4;
   }
 
   .about_background p{
-    font-size: 10px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 600px){
+  .mission{
+    width: 80%;
+  }
+}
+
+@media (max-width: 500px){
+
+  .about_container h1{
+    font-size: 35px;
+  }
+  .about_background p{
+    font-size: 13px;
+  }
+
+  .about_message{
+    width: 99%;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 }
 
  /* Media Query for footer */
+
 @media (max-width: 700px) {
   .footer_container {
     display: flex;
@@ -315,7 +380,7 @@ footer {
 @media (max-width:500px){
   footer h4,
   p {
-    font-size: 12px;
+    font-size: 15px;
   }
 }
 

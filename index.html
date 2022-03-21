@@ -30,7 +30,7 @@
     />
   </head>
 
-  <body>
+  <body id="home">
     <header>
       <nav class="navbar">
         <img src="./images/logo1.jpg" alt="#" class="logo" />
@@ -50,22 +50,16 @@
             </a>
             <input type="checkbox" id="btn" />
             <ul class="submenu submenu-1">
-              <li><a href="#" class="menu-link-2">Advisory</a></li>
-              <li><a href="#" class="menu-link">Security</a></li>
-              <li><a href="#" class="menu-link">Service Desk</a></li>
-              <li><a href="#" class="menu-link">IT Service</a></li>
-              <li><a href="#" class="menu-link">Voice Solutions</a></li>
-              <li><a href="#" class="menu-link">Hardware/Infrastructure</a></li>
-              <li><a href="#" class="menu-link">Enterprise Application</a></li>
-              <li>
-                <a href="#" class="menu-link"
-                  >Software Development & Network Service</a
-                >
+              <li><a href="#services" class="menu-link-2">Advisory</a></li>
+              <li><a href="#services" class="menu-link">Security</a></li>
+              <li><a href="#services" class="menu-link">Service Desk</a></li>
+              <li><a href="#services" class="menu-link">IT Service</a></li>
+              <li><a href="#services" class="menu-link">Voice Solutions</a></li>
+              <li><a href="#services" class="menu-link">Hardware/Infrastructure</a></li>
+              <li><a href="#services" class="menu-link">Enterprise Application</a></li>
+              <li><a href="#services" class="menu-link">Software Development & Network Service</a >
               </li>
-              <li>
-                <a href="#" class="menu-link"
-                  >Sofware Development Outsourcing</a
-                >
+              <li> <a href="#services" class="menu-link">Sofware Development Outsourcing</a>
               </li>
             </ul>
           </li>
@@ -79,7 +73,7 @@
         <div class="slideshow-item">
           <img src="./images/software.jpg" alt="" />
           <div class="slideshow-item-text">
-            <h5>Software Development </h5>
+            <h2>Software Development </h2>
             <p>
                Enhance business operations using effective software that meet modern standard.
             </p>
@@ -88,7 +82,7 @@
         <div class="slideshow-item">
           <img src="./images/technology.jpg" alt="" />
           <div class="slideshow-item-text">
-            <h5>Technology Solution</h5>
+            <h2>Technology Solution</h2>
             <p>
               We provide easy access to world class technology, there by meeting your IT needs.
             </p>
@@ -97,7 +91,7 @@
         <div class="slideshow-item">
           <img src="./images/business.jpg" alt="" />
           <div class="slideshow-item-text">
-            <h5>Business Security</h5>
+            <h2>Business Security</h2>
             <p>
               Secure Business information and infrastructure with modern Technology.
             </p>
@@ -106,10 +100,7 @@
       </div>
 
       <div class="section services dark" id="services">
-        <div class="section_title_container">
-          <div class="section_subtitle">
-            <!-- <h5>what can we do for you?</h5> -->
-          </div>
+        <div class="section_title_container"> 
           <div class="section_title">
             <h2>Our Services</h2>
           </div>
@@ -246,7 +237,7 @@
         </div>
       </div>
 
-      <div class="section milestones semiDark" id="milestones">
+      <div class="milestones " id="milestones">
         <div class="section_title_container">
           <div class="section_title">
             <h2>lets show you our figures</h2>
@@ -283,9 +274,9 @@
         <div class="footer_links">
           <h3>Quick Links</h3>
           <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Projects</li>
+            <li><a href="#home">Home</a> </li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./projects.html">Projects</a></li>
             <li>Our Team</li>
           </ul>
         </div>
@@ -305,8 +296,8 @@
             <li class="address"><i class="fa fa-location-arrow"></i><span> 21 Niamey Street Wuse 2,</span>  <span>Abuja, Nigeria.</span></li>
             <!-- <li>Phone: 07047474747</li> -->
           </ul>
-          <div>
-          <h4 class="follower">Follow US </h4>
+          <div class="follower-container">
+          <h4 class="follower">Follow Us </h4>
           <div class="icon">
                     <i class="fa fa-facebook"></i>
                     <i class="fa fa-twitter"></i>
@@ -321,28 +312,6 @@
         <p>Copyright <i class="fa fa-copyright"></i> Giginov Limited 2022. All Rights Reserved</p>
       </div>
     </footer>
-
-    <!-- <footer>
-      <div class="footer_container">
-        <div class="giginov_address">
-          <h4 class="footer_title">Giginov Limited</h4>
-          <p class="office_address"><i class="fa fa-location-arrow"></i> No. 21 Niamey Street Wuse 2, Abuja, Nigeria.</p>
-          <p class="info_1"> <i class="fa fa-envelope"></i>  info@giginov.com</p> 
-          <p class="info_2">  <i class="fa fa-globe"></i> www.giginov.com</p>
-        </div>
-        <div>
-          <h4 class="follower">Follow US </h4>
-          <div class="icon">
-                    <i class="fa fa-facebook"></i>
-                    <i class="fa fa-twitter"></i>
-                    <i class="fa fa-instagram"></i>
-                    <i class="fa fa-linkedin"></i>
-            </div>
-        </div>
-    </div>
-      <p class="copyright_info">Copyright <i class="fa fa-copyright"></i> Giginov Limited 2022</p>    
-    </footer> -->
-
     <script>
       const hamburger = document.querySelector(".hamburger");
       hamburger.addEventListener("click", function () {

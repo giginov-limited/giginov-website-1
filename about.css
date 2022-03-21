@@ -207,82 +207,77 @@ footer {
 }
 
       /* About */
-.about_container h1 {
+.about-img-container{
+  height: 50vh;
+  width: 100vw;
+  /* background-color: aqua; */
+  display: grid;
+  place-items: center;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(./images2/A1.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.behind-article{
+  height: 100vh;
+}
+
+h1 {
   text-align: center;
   font-size: 60px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 30px;
+  color: var(--light)
+}
+h2{
   text-align: center;
-  margin-bottom: 20px;
 }
-
-.spacing{
-  height: 70px;
+article{
+   display: grid;
+   gap: 20px;
 }
-
-.about_container {
-  margin-bottom: 80px;
-  /*width: 90%;*/
+.about{
+  position: relative;
 }
-
-.about_background{
-  background-color: rgb(0, 0, 54.51);
-  padding-top: 20px;
-  padding-bottom: 20px;
-  width: 80%;
+.about-container{
+  width: 80vw;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 10px;
+  background-color: var(--light);
+  padding: 50px 50px;
+  display: grid;
+  gap: 30px;
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform:translateX(-50%);
+   box-shadow: rgba(161, 12, 117, 0.534) 0px 2px 4px 0px,
+    rgba(18, 79, 105, 0.829) 0px 2px 16px 0px;
 }
 
-.about_message {
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.6;
-  width: 90%;
-  text-align: justify;
-  text-justify: inter-word;
-  /* background-color: rgba(0, 123, 255, 0.3); */
-  color: var(--light);
-  padding: 35px;
-  
-}
-
-.values_container {
-  display: flex;
-  width: 90%;
-  justify-content: space-evenly;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 100px;
-  padding-top: 40px;
-  padding-bottom:  40px;
-  border-radius: 10px;
-  background-image: url(./images2/about-background.jpg);
-  background-size: cover;
-  background-position: center;
-  /*background-color: blue;*/
+.values{
+  background-color: var(--primary);
+  height: 400px;
 }
 
 .mission h2 {
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .mission {
-  width: 40%;
+  width: 70%;
   text-align: justify;
-  padding: 20px 30px 30px;
+  padding: 50px 90px ;
   line-height: 1.6;
-  border-radius: 10px;
-  border: solid 1px rgba(128, 128, 128, 0.4);
-  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
-  background-color: var(--light);
+  border: solid 1px rgba(128, 128, 128, 0.4); 
+  margin: 50px auto;
+  
 }
 
 .fa-balance-scale,
 .fa-university {
   font-size: 30px;
+  margin-bottom: 10px;
 }
 
 .values-icon {

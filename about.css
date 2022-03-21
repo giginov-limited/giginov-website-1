@@ -459,7 +459,7 @@ article{
     padding-top: 0px;
     left: 22px;
     text-align: center;
-    border-left: 1px solid var(--light);
+    /* border-left: 1px solid var(--light); */
   }
 
   .submenu .menu-link-2 {

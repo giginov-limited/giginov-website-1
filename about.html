@@ -47,8 +47,8 @@
               </li>
             </ul>
           </li>
-          <li><a href="./index.html">Projects</a></li>
-          <li><a href="./index.html">Contact Us</a></li>
+          <li><a href="./projects.html">Projects</a></li>
+          <li><a href="./contact.html">Contact Us</a></li>
         </ul>
       </nav>
     </header>
@@ -133,7 +133,7 @@
         <hr />
         <p>Copyright <i class="fa fa-copyright"></i> Giginov Limited 2022. All Rights Reserved</p>
       </div>
-    </footer>
+</footer>
 
     <script>
       const hamburger = document.querySelector(".hamburger");
@@ -142,11 +142,11 @@
       })
     </script> 
     <script>
-          let about_container = document.querySelector('.about-container');
-          let about_container_height = about_container.offsetHeight;
-          let values = document.querySelector(".values");
-          console.log({about_container_height});
-          values.style.height = `${about_container_height - 80 }px`;
+      let about_container = document.querySelector('.about-container');
+      let about_container_height = about_container.offsetHeight;
+      let values = document.querySelector(".values");
+      console.log({about_container_height});
+      values.style.height = `${about_container_height - 80 }px`;
 
       window.addEventListener('resize', function(event){
           let about_container = document.querySelector('.about-container');
@@ -154,8 +154,7 @@
           let values = document.querySelector(".values");
           console.log({about_container_height});
           values.style.height = `${about_container_height - 80 }px`;
-});
+      });
     </script>
-
 </body>
 </html>

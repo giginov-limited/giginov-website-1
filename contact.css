@@ -295,7 +295,7 @@ form a {
   }
 }
 
-@media(max-width: 750px){
+@media(max-width: 850px){
   .form_image{
     display: none;
   }
@@ -342,7 +342,6 @@ form a {
   }
 }
 
-
 @media (max-width:500px){
 
   form{
@@ -358,8 +357,6 @@ form a {
     font-size: 12px;
   }
 }
-
-
 
 
 /* Media Query for footer */

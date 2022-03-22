@@ -267,6 +267,20 @@ footer {
   }
 }
 
+
+@media (max-width:500px) {
+  .footer_logo img {
+    height: 70px;
+    padding: 20px;
+  }
+
+  .address {
+    display: flex;
+    flex-direction: column;
+
+  }
+}
+
 /*Projects body*/
 .spacing {
   height: 70px;
@@ -367,9 +381,9 @@ h2 {
     font-size: 35px;
   }
 
-  p {
+  /* p {
     font-size: 12px;
-  }
+  } */
 
   .project_container {
     width: 300px;
@@ -386,25 +400,6 @@ h2 {
     margin: auto;
     column-gap: 40px;
     row-gap: 1px;
-  }
-}
-
-/* Media Query for footer */
-@media (max-width: 700px) {
-  .footer_container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .giginov_address {
-    margin-bottom: 50px;
-  }
-}
-
-@media (max-width: 500px) {
-  footer h4,
-  p {
-    font-size: 12px;
   }
 }
 

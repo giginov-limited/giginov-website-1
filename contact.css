@@ -269,6 +269,19 @@ footer{
     margin-bottom: 50px;
   }
 }
+
+@media (max-width:500px) {
+  .footer_logo img {
+    height: 70px;
+    padding: 20px;
+  }
+
+  .address {
+    display: flex;
+    flex-direction: column;
+
+  }
+}
 /* form */
 
 .spacing {
@@ -304,7 +317,7 @@ h1 {
   margin-bottom: 30px;
   height: 35px;
   width: 36.5vw;
-  text-align: center;
+  /* text-align: center; */
   border: 1px solid var(--dark);
 }
 
@@ -410,27 +423,35 @@ form a {
 }
 
 @media (max-width:500px){
-#name,
-#email,
-#company {
-  width: 100%; 
-}
-label{
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  
-}
+  .form_data h2{
+    font-size: 20px;
+  }
+  #name,
+  #email,
+  #company {
+    width: 90%; 
+    margin-left: auto;
+    margin-right: auto;
+  }
+  label{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
 
-#inquiry {
-  display: block;
-  width: 100%;
-  margin-bottom: 30px;
-}
+  #inquiry {
+    display: block;
+    width: 90%;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-form a {
-  width: 100%;
-}
+  form a {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   form{
     margin-left: auto;
@@ -441,23 +462,8 @@ form a {
     font-size: 35px;
   }
 
-  p {
-    font-size: 12px;
-  }
 }
 
-
-/* Media Query for footer */
-@media (max-width: 700px) {
-  .footer_container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .giginov_address {
-    margin-bottom: 50px;
-  }
-}
 
 
 /*media query for navigation*/

@@ -294,7 +294,7 @@ h1 {
   margin-bottom: 30px;
 }
 
-p {
+.response_page p {
   text-align: center;
   font-size: 30px;
   margin-bottom: 30px;
@@ -311,7 +311,7 @@ p {
     h1{
         font-size: 20px;
     }
-   p {
+   .response_page p {
     font-size: 20px;
   }
   .response_page{

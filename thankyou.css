@@ -288,181 +288,38 @@ footer{
   height: 70px;
 }
 
-.form_container{
-  display: grid;
-  grid-template-columns: auto auto;
-  /*height: 100vh;*/
-  justify-content: center;
-  column-gap: 100px;
-}
-
-.form_image {
-  background-image: url(./images/tech.jpg);
-  width: 45vw;
-  height: 100vh;
-  background-position: center;
-  background-size: cover;
-}
-
 h1 {
   text-align: center;
-  font-size: 60px;
+  font-size: 30px;
   margin-bottom: 30px;
 }
 
-#name,
-#email,
-#company {
-  display: block;
-  margin-bottom: 30px;
-  height: 35px;
-  width: 36.5vw;
-  /* text-align: center; */
-  border: 1px solid var(--dark);
-}
-
-
-#inquiry {
-  display: block;
-  width: 36.5vw;
-  margin-bottom: 30px;
-  border: 1px solid var(--dark);
-
-}
-
-form {
-  margin-top: 20px;
-}
-
-form button {
-  margin-top: 30px;
+p {
   text-align: center;
-  background-color: black;
-  color: white;
-  text-decoration: none;
-  display: block;
-  width: 36.5vw;
+  font-size: 30px;
+  margin-bottom: 30px;
 }
-
-/*project button*/
-.send_btn:hover{
-  background-color: hsl(0, 0%, 15%);
-}
-
-.form_page {
-  margin: auto;
-  margin-bottom: 70px;
-}
-
-/*Media query for form page*/
-
-@media(max-width: 1500px){
-   .form_container {
-    column-gap: 60px;
-  }
+.response_page{
+    padding: 100px;
 }
 
 
-@media(max-width: 900px){
 
-  h1 {
-    font-size: 50px;
-    margin-bottom: 10px;
-  }
 
-  .form_container {
-    column-gap: 50px;
-  }
-}
-
-@media(max-width: 850px){
-  .form_image{
-    display: none;
-  }
-
-.form_container {
-    column-gap: 0px;
-  }
-
-  #name,
-  #email,
-  #company {
-    display: block;
-    margin-bottom: 30px;
-    height: 35px;
-    width: 80vw;
-  }
-
-  #inquiry {
-    display: block;
-    width: 80vw;
-    margin-bottom: 30px;
-  }
-  form button {
-    width: 80vw;
-  }
-}
-
-@media(max-width: 700px){ 
-
-  h1 {
-    margin-top: 20px;
-    margin-bottom: 10px;
-  }
-
-  .form_container {
-  display: grid;
-  grid-template-columns: auto;
-  justify-content: center;
-  column-gap: 50px; 
-}
-
-  .form_image {
-  background-image: none;
-  }
-}
 
 @media (max-width:500px){
-  .form_data h2{
+    h1{
+        font-size: 20px;
+    }
+   p {
     font-size: 20px;
   }
-  #name,
-  #email,
-  #company {
-    width: 90%; 
-    margin-left: auto;
-    margin-right: auto;
-  }
-  label{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-  }
-
-  #inquiry {
-    display: block;
-    width: 90%;
-    margin-bottom: 30px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  form button {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  form{
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  h1{
-    font-size: 35px;
-  }
-
+  .response_page{
+    padding: 100px 50px;
 }
+}
+
+
 
 
 

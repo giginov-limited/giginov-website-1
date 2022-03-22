@@ -11,7 +11,7 @@ $subject = "Mail From giginov website";
 $txt ="Name = ". $name . "\r\n  Email = " . $email . "\r\n Company =" . $company . "\r\n Inquiry =" . $inquiry;
 
 $headers = "From: noreply@giginov.com" . "\r\n" .
-"CC: moses@giginov.com";
+"CC: clifford@giginov.com";
 if($email!=NULL){
     mail($to,$subject,$txt,$headers);
 }

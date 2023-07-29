@@ -490,7 +490,9 @@ input {
           background-color: rgba(0, 0, 0, 0.8);
           color:white;
           padding:20px 50px;
-          bottom: 10%;        
+          bottom: 10%;  
+          left: 50%;
+          transform: translateX(-50%);
       }
 
       .swiper-slide img {
